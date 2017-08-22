@@ -20,7 +20,7 @@ public class MyHashMap {
             table[i] = null;*/
     }
     public double get(int key) {
-        int hash = (key % TABLE_SIZE);
+        int hash = Math.abs(key % TABLE_SIZE);
         while (table[hash] != null && table[hash].getKey() != key)
             hash = (hash + 1) % TABLE_SIZE;
         if (table[hash] == null)
@@ -40,8 +40,11 @@ public class MyHashMap {
                 return ;
             }
         }
+        if (table[hash]==null){
+            size++;
+        }
         table[hash] = new MyEntry(key, value);
-        size++;
+
     }
 
     public int getSize() {
