@@ -6,6 +6,19 @@ import static org.junit.Assert.*;
  * Created by Neo on 21.08.2017.
  */
 public class MyHashMapTest {
+
+    @Test
+    public void shoudInsertKeysWithMod128is1(){
+        MyHashMap map = new MyHashMap();
+        /*map.put(129,0);
+        map.put(1,1);
+        System.out.println(map.get(129));
+        System.out.println(map.get(1));*/
+        map.put(-1,0);
+        map.put(1,0);
+        System.out.println(map.get(-1));
+    }
+
     @Test
     public void firstTest() throws Exception {
         MyHashMap map = new MyHashMap();

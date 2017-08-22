@@ -30,7 +30,7 @@ public class MyHashMap {
     }
 
     public void put(int key, double value) {
-        int hash = (key % TABLE_SIZE);
+        int hash = Math.abs(key % TABLE_SIZE);
         int previosHash =hash;
         while (table[hash] != null && table[hash].getKey() != key) {
             hash = (hash + 1) % TABLE_SIZE;
