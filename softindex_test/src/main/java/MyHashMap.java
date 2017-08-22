@@ -6,18 +6,15 @@ import java.util.Arrays;
 public class MyHashMap {
     private   int TABLE_SIZE = 128;
     private int size=0;
-    MyEntry[] table;
+    private MyEntry[] table;
 
     public MyHashMap() {
         table = new MyEntry[TABLE_SIZE];
-        /*for (int i = 0; i < TABLE_SIZE; i++)
-            table[i] = null;*/
+
     }
     public MyHashMap(int capacity) {
         TABLE_SIZE = capacity;
         table = new MyEntry[TABLE_SIZE];
-        /*for (int i = 0; i < TABLE_SIZE; i++)
-            table[i] = null;*/
     }
     public double get(int key) {
         int hash = Math.abs(key % TABLE_SIZE);
