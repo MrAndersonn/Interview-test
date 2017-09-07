@@ -1,2 +1,2 @@
-In this folder is all test from my interviews
+This folder contain all test from my interviews
 
