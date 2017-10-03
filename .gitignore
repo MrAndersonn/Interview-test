@@ -2,5 +2,6 @@ softindex_test/target
 softindex_test/.idea
 *.iml
 .idea
+*.classs
 midnight_coders_test/target
 coding_task/target
